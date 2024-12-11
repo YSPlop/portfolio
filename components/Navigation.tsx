@@ -18,6 +18,8 @@ export default function Navigation() {
   const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const name = "Yukash Sivaraj"
+
   return (
     <nav className="bg-gray-800 shadow-lg fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,7 +28,7 @@ export default function Navigation() {
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="text-xl sm:text-2xl font-bold text-green-400 flex items-center">
                 <Terminal className="mr-2" />
-                <span className="glitch" data-text="Your_Name">Your_Name</span>
+                <span className="glitch" data-text="Your_Name">{name}</span>
               </Link>
             </div>
           </div>

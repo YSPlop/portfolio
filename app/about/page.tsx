@@ -13,7 +13,7 @@ export default function About() {
         transition={{ duration: 0.5 }}
         className="max-w-7xl mx-auto"
       >
-        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-400 glitch" data-text="About_Me">About_Me</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-400 glitch" data-text="About_Me">About Me</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -21,8 +21,8 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Image
-              src="/placeholder.svg?height=400&width=600"
-              alt="Your Name"
+              src="/matrix-avatar.png"
+              alt="Yukash Sivaraj"
               width={600}
               height={400}
               className="rounded-lg shadow-lg w-full h-auto"
@@ -56,8 +56,8 @@ export default function About() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-green-400 glitch" data-text="Personal_Interests">Personal_Interests</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="bg-gray-800 p-6 rounded-lg shadow-neon">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-green-400">Traveling</h3>
-              <p className="text-sm sm:text-base">Exploring new cultures and cuisines around the world.</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-green-400">Lifting</h3>
+              <p className="text-sm sm:text-base">Embracing Strength and Discipline: My Journey in the World of Lifting.</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg shadow-neon">
               <h3 className="text-lg sm:text-xl font-semibold mb-2 text-green-400">Photography</h3>
@@ -70,7 +70,7 @@ export default function About() {
           </div>
         </motion.div>
         
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
@@ -86,7 +86,7 @@ export default function About() {
               className="w-full h-full rounded-lg shadow-neon"
             ></iframe>
           </div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </div>
   )

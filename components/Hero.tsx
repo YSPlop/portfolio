@@ -33,12 +33,14 @@ export default function Hero() {
 
   const handleDownload = () => {
     const link = document.createElement('a')
-    link.href = '/your-resume.pdf' // Update this with the actual path to your resume
-    link.download = 'Your_Name_Resume.pdf' // Update this with your name
+    link.href = '/my_resume.pdf'
+    link.download = 'Yukash_Resume.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
   }
+
+  const name = "Yukash Sivaraj";
 
   return (
     <div className="flex-grow flex items-center justify-center bg-gray-900 overflow-hidden">
@@ -70,10 +72,10 @@ export default function Hero() {
           />
         </motion.div>
         <h1 className="text-4xl sm:text-6xl font-bold mb-4">
-          <TypedText text="Your_Name" />
+          <TypedText text={name} />
         </h1>
         <h2 className="text-xl sm:text-3xl mb-8">
-          <TypedText text="Software Developer | Hacker" delay={1500} />
+          <TypedText text="Software Developer | Engineer" delay={1500} />
         </h2>
         <motion.div
           initial={{ opacity: 0 }}

@@ -61,7 +61,7 @@ const SkillLevel = ({ level }: { level: number }) => {
 
 const Skills = () => {
   return (
-    <div className="py-16 bg-gray-900">
+    <div className="bg-gray-900">
       <h2 className="text-3xl font-bold text-center mb-12 text-green-400">Skills</h2>
       <div className="max-w-5xl mx-auto space-y-12">
         {skillCategories.map((category, index) => (
@@ -95,7 +95,7 @@ const Skills = () => {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className=" bg-gray-900 text-white">
       <main>
         <Skills />
       </main>
