@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom checkbox and radio styles */
+.form-checkbox, .form-radio {
+  @apply rounded border-2 border-green-400/50 bg-gray-900 text-green-400;
+  @apply focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900;
+}
+
+.form-checkbox:checked, .form-radio:checked {
+  background-color: #4ade80;
+  border-color: #4ade80;
+}
+
+/* Custom select styles */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Gradient border animation */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-border {
+  background: linear-gradient(45deg, #4ade80, #22c55e, #16a34a);
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
