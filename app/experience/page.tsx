@@ -36,7 +36,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <div className="flex-grow flex items-center justify-center bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 text-green-400 font-mono overflow-auto">
+    <div className="flex-grow flex items-center justify-center bg-gray-900 py-8 px-4 pt-28 sm:px-6 lg:px-8 text-green-400 font-mono overflow-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

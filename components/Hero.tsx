@@ -100,10 +100,10 @@ export default function Hero() {
           transition={{ delay: 4 }}
           className="mt-8 flex gap-6"
         >
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
+          <a href="https://github.com/YSPlop" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
             <Github size={32} />
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
+          <a href="https://www.linkedin.com/in/yukash-sivaraj" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">
             <Linkedin size={32} />
           </a>
         </motion.div>

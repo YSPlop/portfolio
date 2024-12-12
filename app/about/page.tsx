@@ -6,7 +6,7 @@ import Skills from '@/components/Skills'
 
 export default function About() {
   return (
-    <div className="flex-grow flex items-center justify-center bg-gray-900 text-gray-300 py-8 px-4 sm:px-6 lg:px-8 font-mono overflow-auto pt-20">
+    <div className="flex-grow flex items-center justify-center bg-gray-900 text-gray-300 py-8 px-4 sm:px-6 lg:px-8 font-mono overflow-auto pt-28">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

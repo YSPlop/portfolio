@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.05em -0.025em 0 #fc00ff,
+      0.025em 0.05em 0 #fffc00;
+  }
+  14% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.05em -0.025em 0 #fc00ff,
+      0.025em 0.05em 0 #fffc00;
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.025em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.025em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 #00fffc, 0.05em 0 0 #fc00ff,
+      0 -0.05em 0 #fffc00;
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 #00fffc, 0.05em 0 0 #fc00ff,
+      0 -0.05em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.025em 0 0 #00fffc, -0.025em -0.025em 0 #fc00ff,
+      -0.025em -0.05em 0 #fffc00;
+  }
+}
+
+.glitch {
+  animation: glitch 1s linear infinite;
+}
+
+.shadow-neon {
+  box-shadow: 0 0 5px #00fffc, 0 0 10px #00fffc, 0 0 15px #00fffc, 0 0 20px #00fffc;
+}
+
 /* Custom checkbox and radio styles */
 .form-checkbox, .form-radio {
   @apply rounded border-2 border-green-400/50 bg-gray-900 text-green-400;

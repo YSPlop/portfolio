@@ -75,10 +75,10 @@ const Skills = () => {
             <h3 className="text-xl font-semibold mb-4 text-green-400 border-l-4 border-green-400 pl-3">
               {category.name}
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
               {category.skills.map((skill) => (
                 <div key={skill.name} className="flex items-center space-x-3">
-                  <div className="text-2xl">{skill.icon}</div>
+                  <div className="text-2xl text-green-400">{skill.icon}</div>
                   <div className="flex-grow">
                     <div className="text-sm font-medium text-gray-300">{skill.name}</div>
                     <SkillLevel level={skill.level} />
