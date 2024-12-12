@@ -14,10 +14,9 @@ export async function sendEmail(formData: FormData) {
     },
   });
 
-  // Corrected to use underscore-prefixed variable names for unused variables
-  const servicesRequested = Object.entries(formData.services)
-    .filter(([_key, value]) => value)
-    .map(([key, _value]) => key)
+  // Use Object.keys with filtering to avoid unused variable errors
+  const servicesRequested = Object.keys(formData.services)
+    .filter((key) => formData.services[key])
     .join(', ');
 
   const mailOptions = {
