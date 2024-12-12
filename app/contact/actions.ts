@@ -1,7 +1,7 @@
-'use server'
+'use server';
 
-import { FormData } from './page'
-import nodemailer from 'nodemailer'
+import { FormData } from './page';
+import nodemailer from 'nodemailer';
 
 export async function sendEmail(formData: FormData) {
   const transporter = nodemailer.createTransport({
@@ -12,12 +12,13 @@ export async function sendEmail(formData: FormData) {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
     },
-  })
+  });
 
+  // Corrected to use underscore-prefixed variable names for unused variables
   const servicesRequested = Object.entries(formData.services)
-    .filter(([_, value]) => value)
-    .map(([key, _]) => key)
-    .join(', ')
+    .filter(([_key, value]) => value)
+    .map(([key, _value]) => key)
+    .join(', ');
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
@@ -33,8 +34,7 @@ export async function sendEmail(formData: FormData) {
       Budget: ${formData.budget}
       Project Description: ${formData.description}
     `,
-  }
+  };
 
-  await transporter.sendMail(mailOptions)
+  await transporter.sendMail(mailOptions);
 }
-
