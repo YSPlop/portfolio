@@ -297,7 +297,7 @@ export default function Contact() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-green-400">Tell me about your project or others you've seen that you like</h3>
+            <h3 className="text-xl font-bold text-green-400">Tell me about your project or others you&#39;ve seen that you like</h3>
             <motion.textarea
               whileFocus={{ scale: 1.02 }}
               value={formData.description}
