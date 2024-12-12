@@ -1,7 +1,27 @@
 'use server';
 
-import { FormData } from './page';
 import nodemailer from 'nodemailer';
+
+type Services = {
+  websiteDevelopment: boolean;
+  appDevelopment: boolean;
+  designSystem: boolean;
+  websiteMigration: boolean;
+  ecommerceSite: boolean;
+  performanceEvaluation: boolean;
+};
+
+export interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  company: string;
+  phone: string;
+  location: string;
+  budget: string;
+  description: string;
+  services: Services;
+}
 
 export async function sendEmail(formData: FormData) {
   const transporter = nodemailer.createTransport({
@@ -14,8 +34,8 @@ export async function sendEmail(formData: FormData) {
     },
   });
 
-  // Use Object.keys with filtering to avoid unused variable errors
-  const servicesRequested = Object.keys(formData.services)
+  // Cast keys to keyof Services to ensure type safety
+  const servicesRequested = (Object.keys(formData.services) as (keyof Services)[])
     .filter((key) => formData.services[key])
     .join(', ');
 
